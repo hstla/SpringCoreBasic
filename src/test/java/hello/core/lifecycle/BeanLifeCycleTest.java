@@ -17,7 +17,8 @@ public class BeanLifeCycleTest {
   @Configuration
   static class LifeCycleConfig {
     //destroyMethod의 특별한 기능으로, 메서드를 설정하지 않아도 추론할 수 있는 이름(close,shutdown)이 있으면 추론해서 호출한다.
-    @Bean(initMethod = "init", destroyMethod = "close")
+//    @Bean(initMethod = "init", destroyMethod = "close")
+    @Bean
     public NetworkClient networkClient() {
       NetworkClient networkClient = new NetworkClient();
       networkClient.setUrl("https://hello-sprin.dev");
